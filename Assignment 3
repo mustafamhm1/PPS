@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main() {
+    int math;
+    int a, b;
+
+    printf("Enter first number: ");
+    scanf("%d", &a);
+
+    printf("Enter second number: ");
+    scanf("%d", &b);
+
+    printf("1. Add  2. Sub  3. Mul  4. Div  5. Modulus\nEnter choice: ");
+    scanf("%d", &math);
+
+    switch (math) {
+        case 1:
+            printf("Result: %d\n", a + b);
+            break;
+        case 2:
+            printf("Result: %d\n", a - b);
+            break;
+        case 3:
+            printf("Result: %d\n", a * b);
+            break;
+        case 4:
+            if (b != 0)
+                printf("Result: %d\n", a / b);
+            else
+                printf("Error: division by zero\n");
+            break;
+        case 5:
+            if (b != 0)
+                printf("Result: %d\n", a % b);
+            else
+                printf("Error: division by zero\n");
+            break;
+        default:
+            printf("Invalid choice\n");
+    }
+
+    return 0;
+}
